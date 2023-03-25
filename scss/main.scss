@@ -1,1 +1,21 @@
-@import "home";
+@import "home", "config";
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  position: fixed;
+  inset: 0 0 0;
+  padding: 1rem;
+}
+
+main {
+}
+
+footer {
+}
