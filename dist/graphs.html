@@ -10,14 +10,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <title>Graphs And Networks</title>
-  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="css/graph.css">
 </head>
 
 <body>
   <header>
     <nav>
       <div class="lifecraft-flex">
-        <img class="lifecraft-logo" src="../img/lifecraft-logo.png" alt="LifeCraft Logo">
+        <img class="lifecraft-logo" src="img/lifecraft-logo.png" alt="LifeCraft Logo">
         <div class="lifecraft">
           pls guys pls
         </div>
@@ -37,11 +37,9 @@
   </header>
   <div id="canvas"></div>
   <ul class="dropdown">
-    <li>
-      Select an Organism
-      <ul>
-        <li id="e-coli">E. Coli</li>
-      </ul>
+    <li id="all-automata">
+        Sekect an Organism
+        <ul id="automata-list"></ul>
     </li>
   </ul>
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
@@ -50,8 +48,8 @@
     src="https://cdnjs.cloudflare.com/ajax/libs/graphdracula/1.0.3/dracula.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
   <div id="canvas"></div>
-  <script type="text/javascript" src="../js/raphael.js"></script>
-  <script type="text/javascript" src="../js/main.js"></script>
+  <script type="text/javascript" src="js/raphael.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>
