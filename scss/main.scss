@@ -4,17 +4,52 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header {
+nav {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
   width: 100%;
-  position: fixed;
+  height: 15vh;
+  position: relative;
   inset: 0 0 0;
   padding: 1rem;
+
+  .lifecraft-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .lifecraft-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+  }
+
+  .lifecraft {
+    font-family: $primary-font;
+    color: green;
+    margin-right: 30px;
+  }
+
+  .subpage-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 12px;
+
+    div {
+      margin-right: 35px;
+      &:hover {
+        color: green;
+      }
+    }
+  }
 }
 
 main {
+  width: 100%;
+  height: 100%;
 }
 
 footer {

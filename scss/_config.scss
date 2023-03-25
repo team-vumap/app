@@ -1,5 +1,5 @@
-$primary-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-// $secondary-font: ;
+$primary-font: "Press Start 2P", cursive;
+$secondary-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
 // $primary-colour:
 // $secondary-colour:
@@ -8,4 +8,9 @@ $primary-font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
 }

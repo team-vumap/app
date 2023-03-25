@@ -1,0 +1,13 @@
+#home {
+  .lifecraft-banner {
+    display: block;
+    width: 95vw;
+    height: 30%;
+    // Vertically center banner with autos
+    margin: -15px auto 30px auto;
+  }
+
+  .subheader {
+    font-family: $primary-font;
+  }
+}
