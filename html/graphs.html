@@ -5,14 +5,49 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <title>Graphs And Networks</title>
+  <link rel="stylesheet" href="../scss/graph.css">
 </head>
 
 <body>
+  <header>
+    <nav>
+      <div class="lifecraft-flex">
+        <img class="lifecraft-logo" src="../img/lifecraft-logo.png" alt="LifeCraft Logo">
+        <div class="lifecraft">
+          pls guys pls
+        </div>
+      </div>
+      <div class="subpage-links">
+        <a href="graphs.html">
+          <div>Graphs & Networks</div>
+        </a>
+        <a href="info.html">
+          <div>Organism Info</div>
+        </a>
+        <a href="theory.html">
+          <div>Theory behind Automatons</div>
+        </a>
+      </div>
+    </nav>
+  </header>
   <div id="canvas"></div>
+  <ul class="dropdown">
+    <li>
+        Sekect an Organism
+        <ul>
+          <li id="e-coli">E. Coli</li>
+      </ul>
+    </li>
+  </ul>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/graphdracula/1.0.3/dracula.min.js"></script>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
   <div id="canvas"></div>
   <script type="text/javascript" src="../js/raphael.js"></script>
   <script type="text/javascript" src="../js/main.js"></script>
