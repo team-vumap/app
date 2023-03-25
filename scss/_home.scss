@@ -1,4 +1,4 @@
-.home {
+.home1 {
   &__lifecraft-banner {
     display: block;
     width: 95%;
@@ -39,6 +39,64 @@
       padding: 7px 18px 7px 18px;
       border-radius: 6px;
       margin-bottom: 20px;
+    }
+  }
+}
+
+.home2 {
+  &__equation-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 40px;
+
+    &__title {
+      font-size: 35px;
+      font-weight: bold;
+      text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+      margin-bottom: 60px;
+    }
+
+    &__addends-flex {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-weight: bold;
+
+      &__addend1 {
+        font-size: 35px;
+        width: 150px;
+        margin-right: 45px;
+      }
+
+      &__plus {
+        font-size: 45px;
+        margin-right: 25px;
+        margin-bottom: 10px;
+      }
+
+      &__addend2 {
+        font-family: $primary-font;
+        font-size: 25px;
+        margin-top: 5px;
+        margin-right: 25px;
+      }
+
+      &__equals {
+        font-size: 45px;
+        margin-right: 25px;
+      }
+    }
+  }
+
+  &__wreath-prod-wrapper {
+    background-color: rgba(214, 214, 214, 0.5);
+    padding: 15px 15px 15px 15px;
+    border-radius: 35px;
+
+    &__img {
+      width: 300px;
+      height: 300px;
     }
   }
 }
