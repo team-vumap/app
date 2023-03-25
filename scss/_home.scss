@@ -104,9 +104,22 @@
 .home3 {
   &__container {
     display: flex;
-    flex-direction: row;
-    margin-top: 40px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 400px;
     background-color: rgb(38, 63, 138);
     color: white;
+    margin-top: 40px;
+
+    &__title {
+      font-weight: bold;
+    }
+
+    &__text {
+    }
+  }
+
+  &__img {
   }
 }
