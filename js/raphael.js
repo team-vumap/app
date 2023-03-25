@@ -93,8 +93,45 @@ Raphael.fn.connection = function (obj1, obj2, style) {
             edge.bg && edge.bg[move]({path:path})
                 || style && style.fill && (edge.bg = style.fill.split && selfRef.path(path).attr({stroke: style.fill.split("|")[0], fill: "none", "stroke-width": style.fill.split("|")[1] || 3}).toBack());
             /* setting label */
+            //find how many overlapping edges there are, use "text" to look up the node
+            fromNode = g.nodes[obj1[1].attrs["text"]]
+            toNode = g.nodes[obj2[1].attrs["text"]]
+            //pick one of the nodes to examine, the one with less connections will me most efficient
+            examNode = fromNode.edges.length < toNode.edges.length ? fromNode: toNode;
+            for(total=0,i=0 ;i < examNode.edges.length;i++){
+            //count the number of overlaps
+            //but keep track of which label we&#039;re actually drawing (&#039;me&#039;)
+                if(style.label==examNode.edges[i].style.label){
+                me = total+1
+                }
+            //this checks that the edge I&#039;m looking at overlaps me
+                if(
+                    (
+                    (examNode.edges[i].target.id==toNode.id)&&
+                    (examNode.edges[i].source.id==fromNode.id)
+                    ) ||
+                    (
+                    (examNode.edges[i].target.id==fromNode.id)&&
+                    (examNode.edges[i].source.id==toNode.id)
+                    )
+                )
+                {
+                total++
+            //this is the individual pixel offset for that label on that edge
+            //this calc aims to distribute the labels evenly above and below the mid point
+                offset = (me-((total+1)/2))*24 //24 is the pixel spacing
+                }
+            }
+
+/* YOU NOW NEED TO USE YOUR offset IN THE DRAW CODE */
+
+/* Edit the following bit of code lower down to add the &#039;offset&#039;:
+(edge.label &amp;&amp; edge.label.attr({x:(x1+x4)/2, y:((y1+y4)/2 + offset) })
+
+*/
+
             style && style.label 
-                && (edge.label && edge.label.attr({x:(x1+x4)/2, y:(y1+y4)/2}) 
+                && (edge.label && edge.label.attr({x:(x1+x4)/2, y:(y1+y4)/2 + offset}) 
                     || (edge.label = selfRef.text((x1+x4)/2, (y1+y4)/2, style.label).attr({fill: "#000", "font-size": style["font-size"] || "12px"})));
             style && style.label && style["label-style"] && edge.label && edge.label.attr(style["label-style"]);
             style && style.callback && style.callback(edge);
@@ -383,9 +420,9 @@ Graph.Renderer.Raphael.prototype = {
         }
         /* if edge already has been drawn, only refresh the edge */
         if(!edge.connection) {
-            edge.style && edge.style.callback && edge.style.callback(edge); // TODO move this somewhere else
+            // edge.style && edge.style.callback && edge.style.callback(edge); // TODO move this somewhere else
             edge.connection = this.r.connection(edge.source.shape, edge.target.shape, edge.style);
-            return;
+            // return;
         }
         //FIXME showing doesn't work well
         edge.connection.fg.show();

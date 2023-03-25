@@ -6,9 +6,9 @@ let result = [[[0, 0], [1, 1], [1, 1]], [[0, 0], [1, 0], [1, 2]], [[0, 0], [0, 1
 
 let states = [[0, 0], [0, 1], [0, 2], [1, 0], [1, 1], [1, 2], [2, 0], [2, 1], [2, 2]]
 
-states.forEach(state => {
-    g.addNode(state.toString())
-});
+// states.forEach(state => {
+//     g.addNode(state.toString())
+// });
 
 result.forEach((triplet) => {
     g.addEdge(triplet[0].toString(), triplet[2].toString(), { label: triplet[1].toString(), directed: true });
