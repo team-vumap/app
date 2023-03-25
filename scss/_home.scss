@@ -1,13 +1,27 @@
-#home {
-  .lifecraft-banner {
+.home {
+  &__lifecraft-banner {
     display: block;
     width: 95vw;
     height: 30%;
     // Vertically center banner with autos
-    margin: -15px auto 30px auto;
+    margin: -5px auto 30px auto;
   }
 
-  .subheader {
+  &__subheader1 {
+    width: 50%;
+    text-align: center;
+    line-height: 30px;
     font-family: $primary-font;
+    font-size: 20px;
+    margin: auto auto 40px auto;
+  }
+
+  &__subpage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+
+    &__blurb {
+    }
   }
 }
