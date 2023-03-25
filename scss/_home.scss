@@ -100,3 +100,13 @@
     }
   }
 }
+
+.home3 {
+  &__container {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    background-color: rgb(38, 63, 138);
+    color: white;
+  }
+}
