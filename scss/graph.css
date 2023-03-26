@@ -113,13 +113,4 @@ nav .subpage-links div:hover {
   display: block;
   opacity: 1;
   visibility: visible;
-}
-
-.button {
-  border: 2px;
-}
-
-.graph-container {
-  display: flex;
-  flex-direction: row;
 }/*# sourceMappingURL=graph.css.map */

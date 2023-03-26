@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.home1__lifecraft-banner {
+  display: block;
+  width: 95%;
+  margin: -5px auto 30px auto;
+}
+.home1__subheader1 {
+  width: 50%;
+  text-align: center;
+  line-height: 30px;
+  font-family: "Press Start 2P", cursive;
+  font-size: 20px;
+  margin: auto auto 30px auto;
+}
+.home1__subpage-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.home1__subpage-grid__title {
+  font-weight: bold;
+  color: green;
+  margin-bottom: 20px;
+}
+.home1__subpage-grid__text {
+  margin-bottom: 20px;
+}
+.home1__subpage-grid__btn {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 7px 18px 7px 18px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.home2__equation-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 40px;
+}
+.home2__equation-flex__title {
+  font-size: 35px;
+  font-weight: bold;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 60px;
+}
+.home2__equation-flex__addends-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: bold;
+}
+.home2__equation-flex__addends-flex__addend1 {
+  font-size: 35px;
+  width: 150px;
+  margin-right: 45px;
+}
+.home2__equation-flex__addends-flex__plus {
+  font-size: 45px;
+  margin-right: 25px;
+  margin-bottom: 10px;
+}
+.home2__equation-flex__addends-flex__addend2 {
+  font-family: "Press Start 2P", cursive;
+  font-size: 25px;
+  margin-top: 5px;
+  margin-right: 25px;
+}
+.home2__equation-flex__addends-flex__equals {
+  font-size: 45px;
+  margin-right: 25px;
+}
+.home2__wreath-prod-wrapper {
+  background-color: rgba(214, 214, 214, 0.5);
+  padding: 15px 15px 15px 15px;
+  border-radius: 35px;
+}
+.home2__wreath-prod-wrapper__img {
+  width: 300px;
+  height: 300px;
+}
+
+.home3__container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 40px;
+  background-color: rgb(38, 63, 138);
+  color: white;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 10%;
+  position: relative;
+  inset: 0 0 0;
+  z-index: 100;
+  padding: 1rem;
+}
+nav .lifecraft-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+nav .lifecraft-logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+}
+nav .lifecraft {
+  font-family: "Press Start 2P", cursive;
+  color: green;
+  margin-right: 30px;
+}
+nav .subpage-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 14px;
+}
+nav .subpage-links div {
+  margin-right: 35px;
+  transition: color, 0.15s;
+}
+nav .subpage-links div:hover {
+  color: green;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=main.css.map */
