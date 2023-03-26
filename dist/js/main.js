@@ -5,8 +5,10 @@ let second_automata = '';
 
 let operationSelected = false;
 
+let API_URL = "https://orgaforge-api.herokuapp.com"
+
 function onclick_name(_event, name) {
-    axios.post(`http://127.0.0.1:5000/automata/name?name=${name}`).then((response) => {
+    axios.post(`${API_URL}/automata/name?name=${name}`).then((response) => {
         console.log(response)
         let result = response.data.transitions;
         let states = response.data.states;
@@ -52,7 +54,7 @@ function makeUL(element, automataList) {
 }
 
 function onclick_get_all(_event) {
-    axios.get(`http://127.0.0.1:5000/automata`).then((response) => {
+    axios.get(`${API_URL}/automata`).then((response) => {
         console.log(response)
         let result = response.data;
         let element = _event.target;
@@ -130,13 +132,13 @@ operationButton.addEventListener('click', (e) => {
 const submitButtonOperation = (_event) => {
     first_automata_transition = [];
     second_automata_transition = [];
-    axios.post(`http://127.0.0.1:5000/automata/name?name=${first_automata}`).then((response) => {
+    axios.post(`${API_URL}/automata/name?name=${first_automata}`).then((response) => {
         console.log(response)
         first_automata_transition = response.data.transitions;
-        axios.post(`http://127.0.0.1:5000/automata/name?name=${second_automata}`).then((response) => {
+        axios.post(`${API_URL}/automata/name?name=${second_automata}`).then((response) => {
             console.log(response)
             second_automata_transition = response.data.transitions;
-            axios.post(`http://127.0.0.1:5000/automata/multiply`, {
+            axios.post(`${API_URL}/automata/multiply`, {
                 'first_automata': {
                     "name": first_automata,
                     "transitions": first_automata_transition
