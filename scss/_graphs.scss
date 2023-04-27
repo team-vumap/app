@@ -1,16 +1,5 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-}
-
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: $secondary-font;
 }
 
 nav {
@@ -22,35 +11,40 @@ nav {
   inset: 0 0 0;
   z-index: 100;
   padding: 1rem;
-}
-nav .lifecraft-flex {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-nav .lifecraft-logo {
-  width: 50px;
-  height: 50px;
-  margin-right: 5px;
-}
-nav .lifecraft {
-  font-family: "Press Start 2P", cursive;
-  color: green;
-  margin-right: 30px;
-}
-nav .subpage-links {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  font-size: 14px;
-}
-nav .subpage-links div {
-  margin-right: 35px;
-  transition: color, 0.15s;
-}
-nav .subpage-links div:hover {
-  color: green;
+
+  .lifecraft-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .lifecraft-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+  }
+
+  .lifecraft {
+    font-family: $primary-font;
+    color: green;
+    margin-right: 32px;
+  }
+
+  .subpage-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 14px;
+
+    div {
+      margin-right: 35px;
+      transition: color, 0.15s;
+      &:hover {
+        color: green;
+      }
+    }
+  }
 }
 
 #canvas {
@@ -66,7 +60,6 @@ nav .subpage-links div:hover {
   position: absolute;
   top: 100px;
 }
-
 .dropdown li {
   font: bold 12px/18px sans-serif;
   display: inline-block;
@@ -74,20 +67,24 @@ nav .subpage-links div:hover {
   /*padding: 15px 20px;*/
   background: #fff;
   cursor: pointer;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  -o-transition: all 0.2s;
   transition: all 0.2s;
 }
-
 .dropdown li:hover {
   background: #555;
   color: #fff;
 }
-
 .dropdown li ul {
   padding: 0;
   position: absolute;
   top: 18px;
   left: 0;
   width: 150px;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
   box-shadow: none;
   display: none;
   opacity: 0;
@@ -98,17 +95,14 @@ nav .subpage-links div:hover {
   -ms-transition: opacity 0.2s;
   -o-transition: opacity 0.2s;
 }
-
 .dropdown li ul li {
   display: block;
   color: #000;
   padding-bottom: 5px;
 }
-
 .dropdown li ul li:hover {
   background: #666;
 }
-
 .dropdown li:hover ul {
   display: block;
   opacity: 1;
@@ -122,4 +116,4 @@ nav .subpage-links div:hover {
 .graph-container {
   display: flex;
   flex-direction: row;
-}/*# sourceMappingURL=graph.css.map */
+}
